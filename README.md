@@ -1,111 +1,57 @@
-# Paisa-Vasooli
+# FinancePulse
 
-Paisa Vasooli is a website built with the MERN stack to help you manage and track your expenses. 
-This project was made during the Codesangam 2023 Event conducted by CC Club MNNIT Allahabad, the topic being "Thoth's Steller Ledger"
+FinancePulse is a clean, user-friendly personal finance and expense-tracking website. It helps users manage their daily income, track expenses, and split bills easily within groups. 
 
-## Features
+---
 
-### Basic features
+## ✨ Key Features
 
-- **User Authentication:** Authentication through Login Signup page
-- **Add Transactions:** Easily add income or expense transactions, and edit or delete them if need be
-- **Customizable Categories:** Add personalised categories to transactions
-- **Stats and transaction history:** View total income,expense, balance statistics and past transaction history on dashboard
-- **Dark theme:** Feature to switch to dark mode theme
-- **Recurring Bills:** Notifications sent for recurring bills
-- **Dues Reminder:** Reminders sent for due transactions
-- **Savings Tracker:** Create budgets or financial goals and track the progress.
-- **Add Friends:**  Sent friend requests to people and easily add them in any groups from the friends' list
-- **Make Groups:** Create groups for splitting bills and simplifying debts among friends.
-- **Split Expenses:** Split bills equally between friends in groups
-- **Debt Simplification:** Simplify debts between friends in groups with minimum cash flow
-- **Approval from receiver:** Approval asked from receiver before settling up bill split or debts in groups
-- **Data Analysis and Visualisation:** Various Charts and graphs to visualise spending and earning on a weekly,monthly,category-wise basis
+*   **Dashboard Analytics:** View beautiful charts that summarize your monthly income and expenses.
+*   **Smart Bill Splitting:** Create groups with friends or roommates to split bills and track who owes whom.
+*   **Debt Minimization:** Features an automated system that reduces the number of transactions needed to settle up group balances.
+*   **Secure Authentication:** Secure user signup and login systems, including Google Sign-In support.
+*   **Asynchronous Reminders:** Automatic email alerts for upcoming bill due dates.
 
-### Advanced features
+---
 
-- **OAuth**: User can login with google account
-- **Multiple currencies support**: Transactions can be added in multiple currencies with real-time exchange rates conversion
-- **Track stocks or crypto**: User can add which stocks/crypto he wants to track, and compare multiple stocks in real time
-- **Export Transactions:** Download transaction data in CSV format for record-keeping.
-- **Vault**: Vault to upload and store expense receipts
+## 🛠️ Tech Stack Used
 
-### Unique Features
-  
-- **Filter and Search:** Filter transactions based on categories, date ranges, or both, and search for specific transactions
-- **Inbox**: Receive friend request invitations and acceptance messages 
-- **Email reminders**: Reminders for dues and bills are sent on user's mail
-- **Group codes**: Apart from friends,users can share group code with other people not added as friends to join the group
-- **Comments**: Add comments to a group
-- **Profile page with custom picture:** Users can choose and upload profile pictures as per their choice
-- **Stock Heatmap**: Check out current trends in trendy stocks though a heatmap
-- **Rewards:** In-App achievement badges for achieving certain financial targets
+This application is built using the popular **MERN Stack**:
+*   **Frontend:** React.js, Tailwind CSS (for modern UI styling), and Chart.js (for analytics).
+*   **Backend:** Node.js and Express.js (handling API requests and business logic).
+*   **Database:** MongoDB Atlas (storing users, groups, and transaction records securely in the cloud).
 
-## Images
-Few Images from the site
+---
 
-![image](https://github.com/Khanak21/Paisa-Vasooli/assets/127039986/7c49533a-7f52-4c7c-9007-c223f4189a18)
+## 🚀 How to Run the Project Locally
 
-![image](https://github.com/Khanak21/Paisa-Vasooli/assets/127039986/d6c2ee30-6e79-4fde-a9fa-2d4359d8fe12)
+Follow these quick steps to spin up the application on your own computer:
 
-![image](https://github.com/Khanak21/Paisa-Vasooli/assets/127039986/dca581a0-e721-4e95-8077-6e0f4fe5b0de)
+### 1. Pre-requisites
+Make sure you have [Node.js](https://nodejs.org) installed on your machine.
 
-## Tech Stack
-
-- **Frontend:** React.js
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB,Firebase
-
-## External Libraries/APIs
-- **Google Login:** Google OAuth
-- **Styling:** Bootstrap, Tailwind CSS, Material UI
-- **Data Visualization:** Chart.js
-- **Sending mails**: Nodemailer
-- **API for currency conversion**: JSDelivr
-- **Debt simplification**: splitwise-js-map
-- **To Export**: react-csv
-
-## Installation
-
-1. Clone the repository:
-   `git clone https://github.com/Khanak21/Paisa-Vasooli.git`
-
-2. Install dependencies for both frontend and backend:
-
-```
-   cd frontend
-   npm install
-
-   cd backend
-   npm install
+### 2. Configure Environment Variables
+Create a file named `.env` inside your `/backend` directory and add your secret keys:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_custom_secret_string
+GOOGLE_CLIENT_ID=your_google_oauth_client_id
 ```
 
-3. Configure MongoDB connection: Update the MongoDB connection string in
-   `backend/db/db.js`
+### 3. Install and Run the App
+Open your terminal and run the backend and frontend servers:
 
-4. Run the application:
-```
-//Run frontend (in the frontend directory)
+```bash
+# Set up and start the Backend Server
+cd backend
+npm install
 npm start
 
-//Run backend (in the backend directory)
-npm run serve
+# Open a new terminal tab, set up and start the Frontend
+cd frontend
+npm install
+npm start
 ```
 
-6. Access the application at `http://localhost:3000/`
-
-## Future Additions
-- **Payment Gateways:** Connection to payement apps to enable seamless on-site transactions in groups
-- **Integration with payment apps**: Getting transaction data from UPI apps and displaying it on website
-- **Stock prediction:** Integrating ML to display stock predictions of user-selected stocks
-- **Contacts as friends:** Automatically adding all contacts related to a gmail account in friends' list
-- **Drag and Drop:** Drag and Drop feature for file upload in vault
-- **Pro Version:** Adding a paid version with specific features unlocked, and locked otherwise
-
-## Team Members
-1. Khanak Patwari 
-2. Sahil Gupta 
-3. Shikhar Pandya
-
-## Deployed Link
-Access the deployed site here: https://paisa-vasooli.netlify.app/
+Once both servers are running, open your web browser and navigate to **`http://localhost:3000`** to view your live website!
